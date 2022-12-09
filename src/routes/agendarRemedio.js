@@ -15,7 +15,7 @@ const agendarRemedio = async (req, res) => {
       const resStatus = Number(error.message);
       res.status(resStatus).send({error: "Dados inválidos"})
     }
-    res.status(500).send({error : "Erro inesperado"});
+    res.status(500).send({error : error});
   }
   }
 
